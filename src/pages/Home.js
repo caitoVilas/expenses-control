@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import Footer from '../components/Footer';
-import HeaderMain from '../components/HeaderMain';
-import MainMenu from '../components/MainMenu';
+
 import cuentas from '../assets/images/cuentas.jpg';
 import tarjetas from '../assets/images/tarjetas.jpg';
 
 const Home = () => {
+
+  useEffect(() =>{
+    window.scroll(0,0);
+  },[]);
+  
     return (
       <div>
-        <MainMenu />
-        <HeaderMain />
-        <main className="container-fluid">
-          <section className="container my-2 py-2">
+       
+        <main className="container-fluid principal">
+          <section className="container  py-2">
             <Row>
               <Col md={6} >
                 <Card className="text-center" bg="secondary" text="white">
