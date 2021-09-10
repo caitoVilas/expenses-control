@@ -84,3 +84,8 @@ html {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+.menu-close{
+  background-color: red;
+  color: white;
+}

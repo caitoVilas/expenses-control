@@ -57,7 +57,7 @@ const FormLogin = () => {
         <div>
          <Container fluid className="principal">
                <section className="principal">
-                 <h2 className="section-title">INGRESO DE USUARIOS</h2>
+                 <h2 className="section-title">INGRESO DE USUARIOS <i className="fas fa-users"></i></h2>
                  <Container>
                  <article className="base-principal">
                      <Container>

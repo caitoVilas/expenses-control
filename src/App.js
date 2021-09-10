@@ -7,10 +7,11 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import FormRegister from './pages/FormRegister';
 import FormLogin from './pages/FormLogin';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <HashRouter>
         <MainMenu />
         <HeaderMain />
@@ -22,7 +23,7 @@ function App() {
         </Switch>
         <Footer />
       </HashRouter>
-    </div>
+    </AuthProvider>
   );
 }
 

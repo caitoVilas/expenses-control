@@ -64,7 +64,7 @@ const FormRegister = () => {
         <div>
             <Container fluid className="principal">
                <section className="principal">
-                 <h2 className="section-title">REGISTRO DE USUARIOS</h2>
+                 <h2 className="section-title">REGISTRO DE USUARIOS <i className="fas fa-user-edit"></i></h2>
                  <Container>
                  <article className="base-principal">
                      <Container>
