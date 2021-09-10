@@ -38,8 +38,6 @@ const Home = () => {
             </Row>
           </section>
         </main>
-
-        <Footer />
       </div>
     );
 }

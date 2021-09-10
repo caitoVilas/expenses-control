@@ -38,7 +38,16 @@ const MainMenu = () => {
           <Nav.Link href="#home"><i className="fas fa-home"></i> Inicio</Nav.Link>
          {!isLogged && <Nav.Link href="#register"><i className="fas fa-user-plus"></i> Registrarse</Nav.Link>}
          {!isLogged && <Nav.Link href="#login"><i className="fas fa-sign-in-alt"></i> Ingresar</Nav.Link>}
-         {isLogged && <Nav.Link href="#"><i className="fas fa-calculator"></i> Cuentas</Nav.Link>}
+         {isLogged &&  <Dropdown>
+                      <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                      <i className="fas fa-hand-holding-usd"></i> Gastos
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item>
+                        <i className="fas fa-receipt"></i> Asientos</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+         }
          {isLogged && <Dropdown>
                       <Dropdown.Toggle variant="dark" id="dropdown-basic">
                       <i className="fas fa-money-check"></i> Tarjetas
@@ -53,7 +62,6 @@ const MainMenu = () => {
                           <Dropdown.Item>
                           <i className="fas fa-file-contract"></i> Resumen Cuenta</Dropdown.Item>
                       </Dropdown.Menu>
-                      
                     </Dropdown>
          }
          {isLogged && <Dropdown>
@@ -61,7 +69,7 @@ const MainMenu = () => {
                       <i className="fas fa-user-circle"></i> {user.userName}
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
-                      <Dropdown.Item>
+                      <Dropdown.Item href="#myData">
                       <i className="fas fa-id-card-alt"></i> Mis datos </Dropdown.Item>
                         <Dropdown.Item className="bg-danger link-light" onClick={logout}>
                         <i className="fas fa-power-off"></i> Cerrar Session</Dropdown.Item>

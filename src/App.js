@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import FormRegister from './pages/FormRegister';
 import FormLogin from './pages/FormLogin';
 import { AuthProvider } from './context/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
+import MyData from './pages/MyData';
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/register" component={FormRegister} />
           <Route exact path="/login" component={FormLogin} />
+          <PrivateRoute exact path="/myData" component={MyData}></PrivateRoute>
         </Switch>
         <Footer />
       </HashRouter>
