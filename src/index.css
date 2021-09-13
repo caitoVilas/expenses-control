@@ -89,3 +89,12 @@ html {
   background-color: red;
   color: white;
 }
+
+.border{
+  border: 2px  black;
+}
+
+.error{
+  background-color: red;
+  color: white;
+}

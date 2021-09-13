@@ -5,7 +5,7 @@ const useFormRegister = (initialForm, validateForm) => {
     const [form, setForm] = useState(initialForm);
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
-    const [response, setresponse] = useState(null);
+    //const [response, setresponse] = useState(null);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -42,7 +42,6 @@ const useFormRegister = (initialForm, validateForm) => {
         form,
         errors,
         loading,
-        response,
         handleChange,
         handleBlur,
         handleSubmit

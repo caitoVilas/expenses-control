@@ -53,9 +53,9 @@ const MainMenu = () => {
                       <i className="fas fa-money-check"></i> Tarjetas
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
-                        <Dropdown.Item>
+                        <Dropdown.Item href="#institution">
                         <i className="fas fa-university"></i> Entidades</Dropdown.Item>
-                          <Dropdown.Item>
+                          <Dropdown.Item href="#cards">
                           <i className="fab fa-cc-visa"></i> Tarjetas</Dropdown.Item>
                           <Dropdown.Item>
                           <i className="fas fa-credit-card"></i> Mis Tarjetas</Dropdown.Item>

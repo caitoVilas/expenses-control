@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import Footer from '../components/Footer';
+
 
 import cuentas from '../assets/images/cuentas.jpg';
 import tarjetas from '../assets/images/tarjetas.jpg';
