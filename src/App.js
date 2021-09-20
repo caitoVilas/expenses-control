@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MainMenu from './components/MainMenu';
+import HeaderMain from './components/HeaderMain';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import FormRegister from './pages/FormRegister';
+import FormLogin from './pages/FormLogin';
+import { AuthProvider } from './context/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
+import MyData from './pages/MyData';
+import Entitities from './pages/Entitities';
+import Cards from './pages/Cards';
+import MyCreditCards from './pages/MyCreditCards';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <HashRouter>
+        <MainMenu />
+        <HeaderMain />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/register" component={FormRegister} />
+          <Route exact path="/login" component={FormLogin} />
+          <PrivateRoute exact path="/myData" component={MyData}></PrivateRoute>
+          <PrivateRoute exact path="/institution" component={Entitities}></PrivateRoute>
+          <PrivateRoute exact path="/cards" component={Cards}></PrivateRoute>
+          <PrivateRoute exact path="/my-credits-cads" component={MyCreditCards} ></PrivateRoute>
+        </Switch>
+        <Footer />
+      </HashRouter>
+    </AuthProvider>
   );
 }
 
