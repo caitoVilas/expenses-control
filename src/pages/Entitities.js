@@ -111,6 +111,7 @@ const Entitities = () => {
                         <Container className="px-2 py-2">
                         <Row>    
                             <Col lg={6}>
+                            {entities.length > 0 &&  
                             <Table striped bordered hover variant="dark">
                               <thead>
                                 <tr>
@@ -122,6 +123,8 @@ const Entitities = () => {
                                 {entities.map((en) => <ListEntities key={en.id} entity={en} />)}
                               </tbody>
                             </Table>
+                            }
+                            {entities.length === 0 && <h5 className="text-danger">No hay Entidades</h5>}
                             <Button variant="secondary" onClick={addEntity}>
                             <i className="fas fa-plus-circle"></i> Agregar Entidad
                             </Button>
