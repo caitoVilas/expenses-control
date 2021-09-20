@@ -24,7 +24,7 @@ const Cards = () => {
       },[]);
 
       const getCards = async () => {
-          console.log(url)
+          
         try {
             let res = await fetch(url, {
               method: 'get',
@@ -107,6 +107,7 @@ const Cards = () => {
                         <Container className="px-2 py-2">
                         <Row>    
                             <Col lg={6}>
+                            {cards.length > 0 && 
                             <Table striped bordered hover variant="dark">
                               <thead>
                                 <tr>
@@ -118,6 +119,8 @@ const Cards = () => {
                               {cards.map((card) => <ListCards card={card} />)}
                               </tbody>
                             </Table>
+                            } 
+                            {cards.length === 0 && <h5 className="text-danger">No hay tarjetas</h5>}
                             <Button variant="secondary" onClick={addCard}>
                             <i className="fas fa-plus-circle"></i> Agregar Tarjeta
                             </Button>

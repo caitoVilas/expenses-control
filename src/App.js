@@ -12,6 +12,7 @@ import PrivateRoute from './components/PrivateRoute';
 import MyData from './pages/MyData';
 import Entitities from './pages/Entitities';
 import Cards from './pages/Cards';
+import MyCreditCards from './pages/MyCreditCards';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <PrivateRoute exact path="/myData" component={MyData}></PrivateRoute>
           <PrivateRoute exact path="/institution" component={Entitities}></PrivateRoute>
           <PrivateRoute exact path="/cards" component={Cards}></PrivateRoute>
+          <PrivateRoute exact path="/my-credits-cads" component={MyCreditCards} ></PrivateRoute>
         </Switch>
         <Footer />
       </HashRouter>
